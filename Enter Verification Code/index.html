@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HirePath - OTP Verification</title>
+
+    <link rel="stylesheet" href="otp.css">
+</head>
+
+<body> 
+
+    <!-- Header -->
+
+    <header class="header">
+
+         <div class="brand">
+
+            <div class="logo-placeholder">
+                <img src="../logo.jpg" alt="logo">
+            </div>
+
+            <span>HirePath</span>
+        </div>
+        <div class="header-right">
+
+            <span>Your next chapter starts here.</span>
+
+            <a href="#" class="help-link">
+                ⓘ Need help?
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+
+    <main class="main-container">
+
+        <div class="otp-card">
+
+            <!-- Email Icon -->
+
+            <div class="email-icon">
+                <span>✉</span>
+                <small>✓</small>
+            </div>
+
+
+            <!-- Title -->
+
+            <h1>Enter Verification Code</h1>
+
+            <p class="description">
+                We've sent a 4-digit code to your email.
+            </p>
+
+           
+
+
+            <!-- OTP Form -->
+
+            <form id="otpForm"novalidate >
+
+                <label class="otp-label">
+                    Verification code
+                </label>
+
+                <div class="otp-inputs">
+
+                    <input
+                        type="text"
+                        class="otp-input"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="one-time-code"
+                        id="code1"
+                        autofocus
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="otp-input"
+                        maxlength="1"
+                        inputmode="numeric"
+                        id="code2"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="otp-input"
+                        maxlength="1"
+                        inputmode="numeric"
+                        id="code3"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="otp-input"
+                        maxlength="1"
+                        inputmode="numeric"
+                        id="code4"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Resend Code -->
+
+                <div class="resend-section">
+
+                    <p>Didn't receive the code?</p>
+
+                    <div class="resend-row">
+
+                        <button
+                            type="button"
+                            id="resendBtn"
+                            disabled
+                        >
+                            Resend code
+                        </button>
+
+                        <span id="timer">00:30</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Verify Button -->
+
+                <button
+                    type="submit"
+                    class="verify-btn"
+                    id="verifyBtn"
+                    
+                >
+                    Verify & Continue ✓
+                </button>
+
+            </form>
+
+
+            <!-- Back To Sign In -->
+
+            <a href="../Reset Password/index.html" class="back-link">
+                ← Back to Sign In
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>©️ 2026 HirePath. All rights reserved.</p>
+
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+    </footer>
+
+
+    <!-- Message -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="otp.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HirePath - Jobs Board</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Navbar -->
+        <header class="navbar">
+
+            <div class="logo">
+                <span class="logo-icon"><img src="../logo.jpg" alt="logo"></span>
+                HirePath
+            </div>
+
+            <nav>
+                <a href="../homepage/indeex.html" >Home</a>
+                <a href="../JOPpage/index.html"class="active">Jobs</a>
+                <a href="../Applications/index.html">Applications</a>
+                <a href="../Matching/index.html">Matching</a>
+                <a href="../cv/index.html">CV</a>
+                <a href="../Account/index.html">Account</a>
+            </nav>
+
+            <div class="nav-right">
+
+                <input type="search" placeholder=" Search HirePath">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                        d="m21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0Z" />
+                </svg>
+
+                <span class="notification"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        viewBox="0 0 36 36">
+                        <path d="M0 0h36v36H0z" fill="none" />
+                        <path fill="currentColor"
+                            d="M32.51 27.83A14.4 14.4 0 0 1 30 24.9a12.6 12.6 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.6 12.6 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93a1 1 0 0 0-.34.75v1.36a1 1 0 0 0 1 1h27.8a1 1 0 0 0 1-1v-1.36a1 1 0 0 0-.34-.75M5.13 28.94a16.2 16.2 0 0 0 2.44-3a14.2 14.2 0 0 0 1.65-5.85v-4.94a8.74 8.74 0 1 1 17.47 0v4.94a14.2 14.2 0 0 0 1.65 5.85a16.2 16.2 0 0 0 2.44 3Z"
+                            class="clr-i-outline clr-i-outline-path-1" />
+                        <path fill="currentColor" d="M18 34.28A2.67 2.67 0 0 0 20.58 32h-5.26A2.67 2.67 0 0 0 18 34.28"
+                            class="clr-i-outline clr-i-outline-path-2" />
+                        <path fill="none" d="M0 0h36v36H0z" />
+                    </svg>
+                </span>
+
+                <div class="avatar" id="userAvatar"></div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <section class="hero">
+
+                <div>
+                    <span class="eyebrow">DISCOVER YOUR NEXT MOVE</span>
+
+                    <h1>Find your kind of opportunity.</h1>
+
+                    <p>
+                        Roles curated around your skills, ambitions, and what comes next.
+                    </p>
+                </div>
+
+                <button class="saved-count" id="savedFilter">
+                    ♧ Saved jobs (<span id="savedCount">0</span>)
+                </button>
+
+            </section>
+
+            <!-- Search and Filters -->
+            <section class="search-panel">
+
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput" placeholder="Job title, keyword, or company">
+                </div>
+
+                <select id="locationFilter" class="filter-select">
+                    <option value="">♧ Location</option>
+                    <option value="Remote">Remote</option>
+                    <option value="London">London</option>
+                    <option value="Berlin">Berlin</option>
+                </select>
+
+                <select id="typeFilter" class="filter-select">
+                    <option value="">▣ Job type</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Internship">Internship</option>
+                </select>
+
+                <select id="sortFilter" class="filter-select">
+                    <option value="match">⚙ Best match</option>
+                    <option value="highest">Highest match</option>
+                    <option value="lowest">Lowest match</option>
+                </select>
+
+                <span class="active-badge">✦ 85% AI Match active</span>
+
+            </section>
+
+            <!-- Jobs Header -->
+            <div class="section-header">
+                <h3>Recommended opportunities <span>4 roles</span></h3>
+                <span class="sort-label">Sort by: <b>Best match</b></span>
+            </div>
+
+            <!-- Jobs Container -->
+            <section class="jobs-container" id="jobsContainer">
+
+                <!-- Jobs generated by JavaScript -->
+
+            </section>
+
+            <div class="empty-state" id="emptyState">
+                No jobs found. Try another search.
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <span>© 2026 HirePath. Your next chapter starts here.</span>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Need help?</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../folder reset/user-info.js"></script>
+
+</body>
+
+</html>

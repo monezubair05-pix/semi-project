@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HirePath - Applications Tracker</title>
+
+    <link rel="stylesheet" href="applications.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+            <div class="logo">
+                <span class="logo-icon"><img src="../logo.jpg" alt="logo"></span>
+                HirePath
+            </div>
+
+            <nav>
+                <a href="../homepage/indeex.html" >Home</a>
+                <a href="../JOPpage/index.html">Jobs</a>
+                <a href="../Applications/index.html"class="active">Applications</a>
+                <a href="../Matching/index.html">Matching</a>
+                <a href="../cv/index.html">CV</a>
+                <a href="../Account/index.html">Account</a>
+            </nav>
+
+            <div class="nav-right">
+
+                <input type="search" placeholder=" Search HirePath">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                        d="m21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0Z" />
+                </svg>
+
+                <span class="notification"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        viewBox="0 0 36 36">
+                        <path d="M0 0h36v36H0z" fill="none" />
+                        <path fill="currentColor"
+                            d="M32.51 27.83A14.4 14.4 0 0 1 30 24.9a12.6 12.6 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.6 12.6 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93a1 1 0 0 0-.34.75v1.36a1 1 0 0 0 1 1h27.8a1 1 0 0 0 1-1v-1.36a1 1 0 0 0-.34-.75M5.13 28.94a16.2 16.2 0 0 0 2.44-3a14.2 14.2 0 0 0 1.65-5.85v-4.94a8.74 8.74 0 1 1 17.47 0v4.94a14.2 14.2 0 0 0 1.65 5.85a16.2 16.2 0 0 0 2.44 3Z"
+                            class="clr-i-outline clr-i-outline-path-1" />
+                        <path fill="currentColor" d="M18 34.28A2.67 2.67 0 0 0 20.58 32h-5.26A2.67 2.67 0 0 0 18 34.28"
+                            class="clr-i-outline clr-i-outline-path-2" />
+                        <path fill="none" d="M0 0h36v36H0z" />
+                    </svg>
+                </span>
+
+                <div class="avatar" id="userAvatar"></div>
+
+            </div>
+
+        </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    YOUR APPLICATION JOURNEY
+                </p>
+
+                <h1>Every application. One clear view.</h1>
+
+                <p class="subtitle">
+                    Track your momentum, prepare for what's next,
+                    and keep moving forward.
+                </p>
+
+            </div>
+
+            <div class="update-status">
+                <span>↻</span>
+                Updated just now
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    ▣
+                </div>
+
+                <div>
+                    <h2>
+                        Total: <span id="totalCount">4</span> Active
+                    </h2>
+
+                    <p>All your opportunities in one place</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    ▥
+                </div>
+
+                <div>
+                    <h2>
+                        Response Rate:
+                        <span id="responseRate">75%</span>
+                    </h2>
+
+                    <p id="responseDescription">
+                        3 of 4 employers have responded
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ▦
+                </div>
+
+                <div>
+                    <h2>
+                        Interviews:
+                        <span id="interviewCount">1</span> Scheduled
+                    </h2>
+
+                    <p>Your next conversation is booked</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTER TABS -->
+
+        <section class="filter-section">
+
+            <div class="filter-tabs">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All Applications (<span id="allCount">4</span>)
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="progress"
+                >
+                    ▣ In Progress (<span id="progressCount">2</span>)
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="attention"
+                >
+                    Needs Attention (<span id="attentionCount">1</span>)
+                </button>
+
+            </div>
+
+
+            <select id="sortSelect" class="sort-select">
+
+                <option value="newest">Most Recent</option>
+
+                <option value="oldest">Oldest First</option>
+
+                <option value="match">Highest Match</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- APPLICATIONS LIST -->
+
+        <section class="applications-list" id="applicationsList">
+
+
+            <!-- APPLICATION 1 -->
+
+            <article
+                class="application-card interview-card"
+                data-status="progress"
+                data-date="2026-05-10"
+                data-match="95"
+            >
+
+                <div class="application-main">
+
+                    <div class="company-logo purple">
+                        PM
+                    </div>
+
+                    <div class="application-info">
+
+                        <h2>Front-End Developer</h2>
+
+                        <p class="company-details">
+                            Paymob · Remote · Applied 10 May
+                        </p>
+
+                    </div>
+
+                    <div class="application-badges">
+
+                        <span class="status-badge interview">
+                            ✓ Scheduled Interview
+                        </span>
+
+                        <span class="match-badge">
+                            95% match
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="application-bottom">
+
+                    <div class="interview-details">
+
+                        <span class="meeting-icon">▣</span>
+
+                        <strong>Google Meet</strong>
+
+                        <span class="meeting-date">
+                            Wed 15 May, 1:00 PM
+                        </span>
+
+                        <span class="meeting-duration">
+                            30 min · Technical conversation
+                        </span>
+
+                    </div>
+
+                    <button class="primary-btn interview-btn">
+                        View Interview
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- APPLICATION 2 -->
+
+            <article
+                class="application-card"
+                data-status="progress"
+                data-date="2026-05-09"
+                data-match="89"
+            >
+
+                <div class="application-main">
+
+                    <div class="company-logo blue">
+                        SW
+                    </div>
+
+                    <div class="application-info">
+
+                        <h2>UI/UX Designer</h2>
+
+                        <p class="company-details">
+                            Swvl · Remote · Applied 9 May
+                        </p>
+
+                    </div>
+
+                    <div class="application-badges">
+
+                        <span class="status-badge screening">
+                            • Passed Screening
+                        </span>
+
+                        <span class="match-badge">
+                            89% ATS match
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="application-bottom">
+
+                    <p class="application-note">
+                        <span>◎</span>
+                        Your portfolio is now with the design team for review.
+                    </p>
+
+                    <button class="text-btn details-btn">
+                        View application →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- APPLICATION 3 -->
+
+            <article
+                class="application-card"
+                data-status="attention"
+                data-date="2026-05-08"
+                data-match="86"
+            >
+
+                <div class="application-main">
+
+                    <div class="company-logo orange">
+                        VO
+                    </div>
+
+                    <div class="application-info">
+
+                        <h2>Data Analyst</h2>
+
+                        <p class="company-details">
+                            VortexOne · London, UK · Applied 8 May
+                        </p>
+
+                    </div>
+
+                    <div class="application-badges">
+
+                        <span class="status-badge review">
+                            • Under Review
+                        </span>
+
+                        <span class="match-badge">
+                            86% match
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="application-bottom">
+
+                    <div class="progress-wrapper">
+
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+
+                        <span>Step 1 of 3 passed</span>
+
+                    </div>
+
+                    <button class="text-btn details-btn">
+                        View application →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- APPLICATION 4 -->
+
+            <article
+                class="application-card skill-card"
+                data-status="attention"
+                data-date="2026-05-07"
+                data-match="70"
+            >
+
+                <div class="application-main">
+
+                    <div class="company-logo blue">
+                        SI
+                    </div>
+
+                    <div class="application-info">
+
+                        <h2>AI Intern</h2>
+
+                        <p class="company-details">
+                            Synapse Intelligence · Berlin, DE · Applied 7 May
+                        </p>
+
+                    </div>
+
+                    <div class="application-badges">
+
+                        <span class="status-badge skill-gap">
+                            Skill Gap Active
+                        </span>
+
+                        <span class="match-badge">
+                            +20% boost ←
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-suggestions">
+
+                    <div>
+                        <span class="bulb">♧</span>
+                        <p>
+                            <strong>Docker:</strong>
+                            Demonstrate a small project to show deployment skills.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <strong>Unit Testing:</strong>
+                            Add tests for core functions and share coverage.
+                        </p>
+                    </div>
+
+                    <button class="text-btn build-btn">
+                        Build these skills +
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- EMPTY STATE -->
+
+        <div class="empty-state" id="emptyState">
+
+            <span>⌕</span>
+
+            <h3>No applications found</h3>
+
+            <p>Try changing your filter or search keywords.</p>
+
+        </div>
+
+
+        <!-- FOOTER NOTE -->
+
+        <div class="bottom-note">
+            ◎ Your application details are private and secure.
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <p>
+                ©️ 2026 HirePath. Your next chapter starts here.
+            </p>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Need Help?</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- DETAILS MODAL -->
+
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <button class="close-modal" id="closeModal">
+                ×
+            </button>
+
+            <h2 id="modalTitle">Application Details</h2>
+
+            <div id="modalContent"></div>
+
+            <button class="primary-btn modal-close-btn" id="modalDone">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="applications.js"></script>
+    <script src="../folder reset/user-info.js"></script>
+
+</body>
+
+</html>

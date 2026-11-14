@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: #eef5ff;
+    color: #19243c;
+}
+
+.loading-page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 48%,
+            rgba(116, 112, 255, 0.22) 0%,
+            rgba(190, 207, 255, 0.12) 30%,
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            #edf5ff,
+            #f5f8ff,
+            #eaf3ff
+        );
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding: 22px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #19243c;
+}
+
+
+/* Logo Placeholder */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #19243c;
+}
+
+.logo-placeholder {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Header Right */
+
+.header-right {
+    display: flex;
+    text-align: right;
+    font-size: 12px;
+    color: #8998b2;
+}
+
+.header-right > p {
+    margin-bottom: 12px;
+    color: #7788a5;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #7788a5;
+    font-size: 11px;
+}
+
+.header-links a:hover {
+    color: #5040ed;
+}
+
+.header-links div {
+    display: flex;
+    gap: 18px;
+}
+.header-right .header-links a.Need {
+    color: #5040ed !important;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header-right .header-links a.Need:hover {
+    color: #19243c !important;
+}
+
+/* Main Content */
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Illustration Placeholder */
+
+.illustration-placeholder {
+    width: 150px;
+    height: 125px;
+    margin-bottom: 18px;
+}
+.illustration-placeholder {
+    width: 180px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.illustration-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+}
+
+
+
+.main-content h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #19243c;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #8998b2;
+    margin-bottom: 35px;
+}
+
+
+
+.progress-container {
+    width: 280px;
+    max-width: 85%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #dce7f7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 34%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #5141f5,
+        #7955ff
+    );
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    font-size: 11px;
+    color: #8494b0;
+    margin-top: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .header-right {
+        font-size: 10px;
+    }
+
+    .header-links a {
+        font-size: 9px;
+    }
+
+    .main-content {
+        width: 95%;
+    }
+
+    .illustration-placeholder {
+        width: 120px;
+        height: 110px;
+    }
+
+    .main-content h1 {
+        font-size: 32px;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+
+    .progress-container {
+        width: 240px;
+    }
+}

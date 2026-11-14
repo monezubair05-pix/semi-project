@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HirePath - Create Account</title>
+
+    <link rel="stylesheet" href="./styleSig.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+   <header class="header">
+
+            <div class="brand">
+               
+                <div class="logo-placeholder">
+                    <img src="../logo.jpg" alt="logo">
+                </div>
+
+                <span>HirePath</span>
+            </div>
+
+            <div class="header-right">
+                <p>Your next chapter starts here.</p>
+
+                <div class="header-links">
+                    <a href="#" class="Need">Need help?</a>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+    <!-- Main Section -->
+    <main class="main-container">
+
+        <div class="signup-card">
+
+            <!-- Logo Icon -->
+            <div class="logo">
+                <img src="../logo.jpg" alt="logo" width="90px" height="70px">
+            </div>
+            <h1>Create Account</h1>
+
+            <p class="subtitle">
+                Great opportunities begin with a simple step.
+            </p>
+
+
+            <!-- Account Type -->
+            <div class="account-types">
+
+                <button
+                    type="button"
+                    class="type-btn active"
+                    data-type="student"
+                >
+                    🎓 Student/Graduate
+                </button>
+
+                <button
+                    type="button"
+                    class="type-btn"
+                    data-type="company"
+                >
+                    ▦ Company/Employer
+                </button>
+
+            </div>
+
+
+            <!-- Form -->
+            <form id="signupForm">
+
+                <!-- Full Name -->
+                <div class="form-group">
+
+                    <label for="fullName">Full Name</label>
+
+                    <div class="input-box">
+
+                        <span>♙</span>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <div class="input-box">
+
+                        <span>✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">Password</label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="eye-btn"
+                            id="togglePassword">
+    
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password Strength -->
+                <div class="strength-container">
+
+                    <div class="strength-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <small id="strengthText">
+                        Enter password
+                    </small>
+
+                </div>
+
+
+                <!-- Terms -->
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                    >
+
+                    <label for="terms">
+                        I agree to the
+                        <a href="#">Terms of Service</a>
+                        and
+                        <a href="#">Privacy Policy</a>.
+                    </label>
+
+                </div>
+
+
+                <!-- Error Message -->
+                <p id="errorMessage"></p>
+
+
+                <!-- Submit Button -->
+                <button type="submit" class="create-btn">
+                    Create Account ←
+                </button>
+
+            </form>
+
+
+            <!-- Sign In -->
+            <p class="signin-text">
+                Already have an account?
+
+                <a href="#" id="signinLink">
+                    Sign In
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <span>©️ 2026 HirePath. All rights reserved.</span>
+
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </footer>
+
+
+    <script src="./scriptSig.js"></script>
+
+</body>
+
+</html>
